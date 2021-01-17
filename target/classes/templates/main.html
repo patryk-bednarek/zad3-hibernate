@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"><head>
+    <meta charset="UTF-8">
+    <title>Car Rent</title>
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/commons.css">
+
+</head>
+<body>
+<div th:replace="fragments.html :: logo"></div>
+<div th:replace="fragments.html :: menu"></div>
+<div id="content">
+    <th:block th:each="vehicle : ${vehicles}">
+        <div class="vehicle-box">
+            <div th:text="${vehicle.brand}" class="brand-box"></div>
+            <div th:text="${vehicle.model}" class="model-box"></div>
+            <div class="vehicle-data-box">
+                <div th:text="'Rejestracja: ' + ${vehicle.plate}"></div>
+                <div th:text="'Wypożyczony: ' + ${vehicle.rent}"></div>
+                <!--<div th:text="'Ilość: ' + ${vehicle.pieces}"></div>-->
+                <!--<a th:href="@{/addToBasket/{id}(id=${book.id})}" class="buy-button" th:if="${isLogged}"></a>-->
+                <a th:if="${role == 'ADMIN'}" th:href="@{/edit/{id}(id=${vehicle.id})}" class="edit-button">Edytuj</a>
+                <form method="post">
+                    <a th:if="${isLogged}" th:href="@{/rent/{id}(id=${vehicle.id})}" class="rent-button">Wypożycz</a>
+                </form>
+            </div>
+        </div>
+    </th:block>
+
+</div>
+</body>
+</html>

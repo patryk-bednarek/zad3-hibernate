@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Unicorn Book Store</title>
+    <link rel="stylesheet" href="/basket.css">
+    <link rel="stylesheet" href="/commons.css">
+    <link rel="stylesheet" href="/rent.css">
+</head>
+<body>
+<div th:replace="fragments.html :: logo"></div>
+<div th:replace="fragments.html :: menu"></div>
+<div id="content">
+
+    <div class="row header">
+        <div class="brand">Marka</div>
+        <div class="model">Model</div>
+        <div class="plate">Rejestracja</div>
+
+    </div>
+
+    <th:block th:each="vehicle : ${vehicles}">
+        <div class="row">
+            <div class="brand" th:text="${vehicle.brand}"></div>
+            <div class="model" th:text="${vehicle.model}"></div>
+            <div class="plate" th:text="${vehicle.plate}"></div>
+
+        </div>
+    </th:block>
+
+    <div class="row header">
+        <div class="brand"></div>
+        <div class="model"></div>
+        <div class="plate"></div>
+
+    </div>
+
+
+</div>
+</body>
+</html>

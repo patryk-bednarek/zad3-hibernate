@@ -1,0 +1,49 @@
+.vehicle-box {
+    width: 80%;
+    margin: 15px auto;
+    border: 2px solid black;
+}
+.brand-box {
+    font-size: 30px;
+    padding: 10px;
+}
+.model-box {
+    font-size: 26px;
+    padding: 10px;
+}
+.vehicle-data-box {
+    font-size: 20px;
+    padding: 10px;
+}
+.plate-data-box div {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.edit-button {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    margin: 5px 25px;
+    transition: color 1.5s;
+    display: inline-block;
+    float: right;
+    margin-top: -20px;
+}
+.edit-button:hover {
+    color: red;
+}
+
+.rent-button {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    margin: 5px 25px;
+    transition: color 1.5s;
+    display: inline-block;
+    float: right;
+    margin-top: -20px;
+}
+.rent-button:hover {
+    color: red;
+}

@@ -1,0 +1,27 @@
+.header {
+    margin-top: 50px;
+}
+.row {
+    width: 80%;
+    margin: 10px auto;
+    font-size: 20px;
+    display: inline-block;
+    float: right;
+    margin: 5px 25px;
+}
+.brand {
+    width: 39%;
+    display: inline-block;
+}
+.model {
+    width: 20%;
+    display: inline-block;
+}
+.plate {
+    width: 20%;
+    display: inline-block;
+}
+.rent {
+    width: 20%;
+    display: inline-block;
+}
