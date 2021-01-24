@@ -1,5 +1,6 @@
 package pl.edu.wszib.car.rent.configuration;
 
+import org.hibernate.SessionFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -12,7 +13,7 @@ import java.sql.SQLException;
 @ComponentScan("pl.edu.wszib.car.rent")
 public class AppConfiguration {
 
-    @Bean
+   /* @Bean
     public Connection connection() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -24,5 +25,11 @@ public class AppConfiguration {
         }
 
         return null;
+    }*/
+
+    @Bean
+    public SessionFactory sessionFactory() {
+        return new org.hibernate.cfg.Configuration().configure().buildSessionFactory();
     }
+
 }
